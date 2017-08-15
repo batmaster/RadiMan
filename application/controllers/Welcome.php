@@ -6,12 +6,15 @@ class Welcome extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
 		$this->load->helper('url');
+
+		 $this->load->model('user_model');
 	}
 
 	public function index() {
-		$data = [];
+		$data['users'] = $this->user_model->get_users();
+
 		$this->load->view('templates/header', $data);
-		$this->load->view('welcome_message');
+		$this->load->view('welcome_message', $data);
 		$this->load->view('templates/footer', $data);
 	}
 

@@ -75,10 +75,11 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => '',
-	'password' => '',
-	'database' => '',
+	// 'hostname' => 'localhost',
+	'hostname' => '188.166.180.204',
+	'username' => 'root',
+	'password' => 'rootaemysql',
+	'database' => 'radius2',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
